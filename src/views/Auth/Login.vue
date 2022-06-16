@@ -54,7 +54,7 @@ export default {
   methods: {
     login() {
       axios
-        .post("user/login", {
+        .post("admin/login", {
           // headers: {
           // 'Content-type': 'application/x-www-form-urlencoded',
           // },
