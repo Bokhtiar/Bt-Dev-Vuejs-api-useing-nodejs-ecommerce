@@ -6,10 +6,10 @@
           <div class="card">
             <div class="card-header">Login</div>
             <div class="card-body">
-              <form action="" method="post">
+              <form @submit.prevent="login()" action="" method="post">
                 <div class="form-gorup">
                   <label for="">Enter Your Email</label>
-                  <input type="text" placeholder="Email" class="form-control" name="email" />
+                  <input type="text" placeholder="Email" v-model="form.email" class="form-control" name="email" />
                 </div>
                 <div class="form-gorup">
                   <label for="">Enter Your Password</label>
@@ -18,6 +18,7 @@
                     type="password"
                     placeholder="Password"
                     name="password"
+                    v-model="form.password"
                   />
                 </div>
 
@@ -30,3 +31,30 @@
     </div>
   </div>
 </template>
+
+<script>
+import Form from 'vform'
+import axios from 'axios'
+export default {
+    data: () => ({
+    form: new Form({
+      email: '',
+      password: ''
+    })
+  }),
+ methods: {
+    login () {
+        axios.post('http://localhost:4000/api/v1/user/login', {
+        // headers: {
+        // 'Content-type': 'application/x-www-form-urlencoded',
+        // },
+        email: this.form.email,
+        password : this.form.password
+    }).then((response) => {
+            console.log(response)
+           
+        })
+    }
+  }
+}
+</script>

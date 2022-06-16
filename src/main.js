@@ -5,6 +5,12 @@ import router from './router'
 const app = createApp(App)
 window.token = localStorage.getItem('token')
 
+
+import axios from 'axios'
+window.axios = axios
+// axios.defaults.baseURL = 'http://localhost/laravelVuejsPos/public/api';
+
+
 app.use(router)
 
 app.mount('#app')
