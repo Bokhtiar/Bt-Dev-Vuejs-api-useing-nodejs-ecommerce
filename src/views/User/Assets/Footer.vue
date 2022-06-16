@@ -1,0 +1,147 @@
+<template>
+    <div>
+        <!-- map section -->
+  <section class="map_section">
+    <div id="map" class="h-100 w-100 ">
+    </div>
+  </section>
+
+  <!-- end map section -->
+
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>
+            Fruits
+          </h5>
+          <ul>
+            <li>
+              randomised
+            </li>
+            <li>
+              words which
+            </li>
+            <li>
+              don't look even
+            </li>
+            <li>
+              slightly
+            </li>
+            <li>
+              believable. If you
+            </li>
+            <li>
+              are going to use
+            </li>
+            <li>
+              a passage of
+            </li>
+            <li>
+              Lorem Ipsum,
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>
+            Services
+          </h5>
+          <ul>
+            <li>
+              randomised
+            </li>
+            <li>
+              words which
+            </li>
+            <li>
+              don't look even
+            </li>
+            <li>
+              slightly
+            </li>
+            <li>
+              believable. If you
+            </li>
+            <li>
+              are going to use
+            </li>
+            <li>
+              a passage of
+            </li>
+            <li>
+              Lorem Ipsum,
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>
+            List
+          </h5>
+          <ul>
+            <li>
+              randomised
+            </li>
+            <li>
+              words which
+            </li>
+            <li>
+              don't look even
+            </li>
+            <li>
+              slightly
+            </li>
+            <li>
+              believable. If you
+            </li>
+            <li>
+              are going to use
+            </li>
+            <li>
+              a passage of
+            </li>
+            <li>
+              Lorem Ipsum,
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="social_container">
+            <h5>
+              Follow Us
+            </h5>
+            <div class="social-box">
+              <a href="">
+                <img src="@/assets/user/images/fb.png" alt="">
+              </a>
+
+              <a href="">
+                <img src="@/assets/user/images/twitter.png" alt="">
+              </a>
+              <a href="">
+                <img src="@/assets/user/images/linkedin.png" alt="">
+              </a>
+              <a href="">
+                <img src="@/assets/user/images/instagram.png" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="subscribe_container">
+            <h5>
+              Subscribe Now
+            </h5>
+            <div class="form_container">
+              <form action="">
+                <input type="email">
+                <button type="submit">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    </div>
+</template>
