@@ -1,12 +1,6 @@
 <template>
     <div>
-        <!-- map section -->
-  <section class="map_section">
-    <div id="map" class="h-100 w-100 ">
-    </div>
-  </section>
 
-  <!-- end map section -->
 
   <section class="info_section layout_padding">
     <div class="container">

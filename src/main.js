@@ -8,7 +8,7 @@ window.token = localStorage.getItem('token')
 
 import axios from 'axios'
 window.axios = axios
-// axios.defaults.baseURL = 'http://localhost/laravelVuejsPos/public/api';
+axios.defaults.baseURL = 'http://localhost:4000/api/v1/';
 
 
 app.use(router)
