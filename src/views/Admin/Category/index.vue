@@ -14,11 +14,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="category in categories" :key="category._id">
+            <tr v-for="(category) in categories" :key="category._id">
               <td>{{category.name}}</td>
               <td v-if="category.cat_status == 0">inActive</td>
               <td v-else>Active</td>
-              <td> <router-link to="">Edit</router-link> </td>
+              <td> 
+                <router-link to="">Edit</router-link> 
+                <button @click="status(category._id)" >Status</button>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -44,10 +47,19 @@ export default {
                 console.log(response.data.data);
                 this.categories = response.data.data
             });
+        },
+
+        status(id){
+            axios
+        .get("admin/category/status/" + id ,{ headers: {"Authorization" : `Bearer ${token}`} })
+        .then((response) => {
+          console.log(response);
+          this.AllCategory()
+        });
         }
     },
     mounted(){
-        this.AllCategory()
+        this.AllCategory(); this.status()
     }
 }
 </script>
