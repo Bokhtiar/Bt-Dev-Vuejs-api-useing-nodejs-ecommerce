@@ -27,11 +27,9 @@ import Content from "./views/User/index.vue";
       <div class="hero_area">
         <!-- header section strats -->
         <Navbar></Navbar> <!--navbar-->
-        <router-view> <!--user content -->
-          <Content></Content>
-        </router-view><!--user content end-->
+        </div>
+        <router-view></router-view><!--user content end-->
         <Footer></Footer><!--footer-->
-      </div>
     </body>
     <!--user templete end -->
   </div>
