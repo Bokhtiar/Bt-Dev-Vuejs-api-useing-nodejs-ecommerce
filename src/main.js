@@ -9,6 +9,8 @@ window.token = localStorage.getItem('token')
 import Form from "vform";
 window.Form = Form
 
+
+
 import axios from 'axios'
 window.axios = axios
 axios.defaults.baseURL = 'http://localhost:4000/api/v1/';
