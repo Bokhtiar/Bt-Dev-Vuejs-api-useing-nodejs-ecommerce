@@ -15,7 +15,7 @@
                     v-model="form.email"
                     class="form-control"
                     name="email"
-                  />
+                  /> 
                 </div>
                 <div class="form-gorup">
                   <label for="">Enter Your Password</label>
@@ -44,6 +44,7 @@
 <script>
 import Form from "vform";
 import axios from "axios";
+
 export default {
   data: () => ({
     form: new Form({

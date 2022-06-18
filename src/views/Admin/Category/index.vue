@@ -2,7 +2,7 @@
   <section class="my-5">
     <div class="card">
       <div class="card-header">
-        <h2>List of Category</h2>
+        <h2>List of Category  <router-link to="/admin/category/create" class="btn btn-sm btn-info text-light">+</router-link></h2>
       </div>
       <div class="card-body">
         <table class="table table-striped">
@@ -19,8 +19,9 @@
               <td v-if="category.cat_status == 0">inActive</td>
               <td v-else>Active</td>
               <td> 
-                <router-link to="">Edit</router-link> 
-                <button @click="status(category._id)" >Status</button>
+                <router-link class="btn btn-sm btn-success" :to="{ path: '/admin/category/edit/' + category._id }">Edit</router-link> 
+                <button class="btn btn-sm btn-info text-light" @click="status(category._id)">Status</button>
+                <button class="btn btn-sm btn-danger" @click="CategoryDelete(category._id)">Delete</button>
               </td>
             </tr>
           </tbody>
@@ -56,10 +57,18 @@ export default {
           console.log(response);
           this.AllCategory()
         });
+        },
+        CategoryDelete(id){
+          axios.delete("/admin/category/" + id, {
+            headers: {"Authorization" : `Bearer ${token}`}
+          }).then((response) => {
+            console.log(response)
+            this.AllCategory()
+          })
         }
     },
     mounted(){
-        this.AllCategory(); this.status()
+        this.AllCategory(); this.status(); this.CategoryDelete()
     }
 }
 </script>

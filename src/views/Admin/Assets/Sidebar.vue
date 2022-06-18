@@ -22,23 +22,16 @@
                 <i class="mdi mdi-home menu-icon"></i>
               </router-link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">Basic UI Elements</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-                </ul>
-              </div>
+          <li class="nav-item">
+              <router-link class="nav-link" to="/admin/category">
+                <span class="menu-title">Category</span>
+                <i class="mdi mdi-chart-bar menu-icon"></i>
+              </router-link>
             </li>
 
             <li class="nav-item">
-              <router-link class="nav-link" to="/admin/category">
-                <span class="menu-title">category</span>
+              <router-link class="nav-link" to="/admin/product">
+                <span class="menu-title">Product</span>
                 <i class="mdi mdi-chart-bar menu-icon"></i>
               </router-link>
             </li>

@@ -25,10 +25,21 @@ const router = createRouter({
       path:'/admin/dashboard',
       component: () => import('../views/Admin/index.vue'),
     },
-    {
+    { //category start
       path: '/admin/category',
       component: () => import('../views/Admin/Category/index.vue')
     },
+    {
+      path: '/admin/category/edit/:id',
+      component: () => import('../views/Admin/Category/edit.vue')
+    },
+    {
+      path: '/admin/category/create',
+      component: () => import('../views/Admin/Category/create.vue')
+    } //category end
+
+    //product
+    
 
 
   ]
