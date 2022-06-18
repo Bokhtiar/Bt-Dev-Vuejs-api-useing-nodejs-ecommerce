@@ -22,7 +22,7 @@
                     <td>{{ product.price }} Tk</td>
                     <td v-if="product.product_status == 1">Active</td>
                     <td v-else>Inative</td>
-                    <td><router-link to="" class="btn btn-sm btn-success">Edit</router-link></td>
+                    <td><router-link :to="{ path: '/admin/product/edit/' + product._id }" class="btn btn-sm btn-success">Edit</router-link></td>
                     </tr>
                 </tbody>
                 </table>
