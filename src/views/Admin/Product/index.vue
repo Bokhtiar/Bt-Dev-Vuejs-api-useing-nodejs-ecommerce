@@ -2,7 +2,7 @@
     <div class="my-5">
        <div class="card">
            <div class="card-header">
-               <h2>Product List <button class="btn btn-sm btn-success">+</button> </h2>
+               <h2>Product List <router-link to="/admin/product/create" class="btn btn-sm btn-success">+</router-link> </h2>
            </div>
            <div class="card-body">
                <table class="table table-striped">
