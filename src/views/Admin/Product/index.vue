@@ -22,7 +22,10 @@
                     <td>{{ product.price }} Tk</td>
                     <td v-if="product.product_status == 1">Active</td>
                     <td v-else>Inative</td>
-                    <td><router-link :to="{ path: '/admin/product/edit/' + product._id }" class="btn btn-sm btn-success">Edit</router-link></td>
+                    <td>
+                        <router-link :to="{ path: '/admin/product/edit/' + product._id }" class="btn btn-sm btn-success">Edit</router-link>
+                        <button @click="destroy(product._id)" class="btn btn-sm btn-info">Delete</button>
+                    </td>
                     </tr>
                 </tbody>
                 </table>
@@ -41,13 +44,21 @@ export default {
     },
 
     methods:{
-        allProduct()
-        {
+        allProduct() {
             axios.get('/admin/product', {
                 headers: {"Authorization" : `Bearer ${token}`}
             }).then((res) => {
                 this.products = res.data.data
             })
+        },
+
+        destroy(id){
+           axios.delete('/admin/product/' + id, {
+                headers: {"Authorization" : `Bearer ${token}`}
+           }).then((res) => {
+               console.log(res)
+               this.allProduct()
+           })
         }
     },
     mounted() {
